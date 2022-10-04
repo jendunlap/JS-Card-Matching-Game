@@ -35,12 +35,12 @@ cards.forEach((card) => {
 //after two clicks check to see if clicked divs are ===
 //if yes, nothing, if no, flip
 
-const onClick1 = () => {
-  if (newDiv1.innerHTML !== newDiv2.innerHTML) {
-    newDiv1.innerHTML = cardBack
-    newDiv2.innerHTML = cardBack
-  }
-}
+// const onClick1 = () => {
+//   if (newDiv1.innerHTML !== newDiv2.innerHTML) {
+//     newDiv1.innerHTML = cardBack
+//     newDiv2.innerHTML = cardBack
+//   }
+// }
 
 let createBoard = () => {
   let newDiv1 = document.createElement('div')
@@ -54,7 +54,7 @@ let createBoard = () => {
   let newDiv2 = document.createElement('div')
   newDiv2.innerHTML = cardBack
   board.append(newDiv2)
-  newDiv2.addEventListener('click', onClick1, () => {
+  newDiv2.addEventListener('click', () => {
     if ((newDiv2.innerHTML = cardBack)) {
       newDiv2.innerHTML = randomCards[1].html
     }
