@@ -1,23 +1,31 @@
 body {
   height: 100vh;
-  background-color:  #381f7a;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: .5fr 3fr .5fr;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: .25fr 2fr .25fr .5fr;
+  background-image: url("https://i.imgur.com/riZHHet.jpg");
+  background-size: 4%;
 }
 
 section {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color:  #381f7a;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
   grid-gap: 30px;
+  padding: 20px 50px 20px 50px;
+  box-shadow: inset 20px 20px #0f004a;
 }
 
-div {
-  /* display: flex; */
-  align-items: center;
-  justify-content: center;
+header, footer {
+  grid-column: span 3;
+  text-align: center;
+}
+
+footer {
+  background-color: black;
+  margin: 0 -10px -10px -10px;
 }
 
 img {

@@ -1,29 +1,3 @@
-let newDiv = document.createElement('div')
-let newList = document.createElement('ul')
-newList.appendChild(newDiv)
-
-function enterPlayer() {
-  let player = document.getElementById('playerName')
-
-  // let newDiv = document.createElement('div')
-  // let newList = document.createElement('ul')
-  let listItem = document.createElement('li')
-
-  listItem.setAttribute('class', 'players')
-  newList.innerText = 'Players:'
-  listItem.innerText = player.value
-
-  newList.appendChild(listItem)
-
-  document.querySelector('.playerNames').appendChild(newDiv)
-
-  players.push(player.value)
-
-  return players
-}
-
-addPlayerButton.addEventListener('click', enterPlayer)
-
 // let createBoard = () => {
 //   let newDiv1 = document.createElement('div')
 //   newDiv1.innerHTML = cardBack

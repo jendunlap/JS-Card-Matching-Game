@@ -1,10 +1,17 @@
+//sound & button to turn off sound
+//timer
+//on hover red border
+
 const board = document.querySelector('.board')
 const cardBack = '<img src="https://i.imgur.com/ywruWIz.jpg">'
 const cards = [
-  // { name: 'coin10', html: '<img src = "https://i.imgur.com/E7dMsON.jpeg">' },
-  // { name: 'coin20', html: '<img src = "https://i.imgur.com/krrXWfU.jpeg">' },
-  // { name: 'flower', html: '<img src = "https://i.imgur.com/rUjl6lP.jpeg">' },
-  // { name: 'life', html: '<img src="https://i.imgur.com/T5hg4TQ.jpeg">' },
+  { name: 'coin10', html: '<img src = "https://i.imgur.com/E7dMsON.jpeg">' },
+  { name: 'coin20', html: '<img src = "https://i.imgur.com/krrXWfU.jpeg">' },
+  { name: 'life', html: '<img src="https://i.imgur.com/T5hg4TQ.jpeg">' },
+  { name: 'flower', html: '<img src = "https://i.imgur.com/rUjl6lP.jpeg">' },
+  { name: 'mushroom', html: '<img src="https://i.imgur.com/G08DFIg.jpeg">' },
+  { name: 'star', html: '<img src="https://i.imgur.com/daLHV0t.jpeg">' },
+  { name: 'flower', html: '<img src = "https://i.imgur.com/rUjl6lP.jpeg">' },
   { name: 'mushroom', html: '<img src="https://i.imgur.com/G08DFIg.jpeg">' },
   { name: 'star', html: '<img src="https://i.imgur.com/daLHV0t.jpeg">' }
 ]
@@ -14,7 +21,7 @@ let secondCard = null
 let firstDiv = null
 let secondDiv = null
 let score = 0
-// let lock = false
+let lock = false
 
 cards.forEach((card) => {
   randomCards.splice(
@@ -38,7 +45,7 @@ randomCards.forEach((card) => {
 })
 
 const flipCard = (div, card) => {
-  // if (lock) return
+  if (lock) return
   if (div.innerHTML === cardBack) {
     div.innerHTML = card.html
     div.classList.remove('back')
@@ -50,7 +57,7 @@ const flipCard = (div, card) => {
     } else {
       secondCard = card
       secondDiv = div
-      // lock = true
+      lock = true
       compareCard()
       declareWin()
     }
@@ -58,19 +65,18 @@ const flipCard = (div, card) => {
 }
 
 const compareCard = () => {
-  if (firstCard === secondCard) {
+  if (firstCard.name === secondCard.name) {
+    lock = false
     score++
-    firstCard = null
-    secondCard = null
-    console.log(score)
   } else {
     setTimeout(() => {
       firstDiv.innerHTML = cardBack
       secondDiv.innerHTML = cardBack
+      lock = false
     }, 500)
-    firstCard = null
-    secondCard = null
   }
+  firstCard = null
+  secondCard = null
 }
 
 const declareWin = () => {
@@ -78,4 +84,3 @@ const declareWin = () => {
     console.log('win!')
   }
 }
-declareWin()
