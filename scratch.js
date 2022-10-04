@@ -1,3 +1,55 @@
+let createBoard = () => {
+  let newDiv1 = document.createElement('div')
+  newDiv1.innerHTML = cardBack
+  board.append(newDiv1)
+  newDiv1.addEventListener('click', () => {
+    if ((newDiv1.innerHTML = cardBack)) {
+      newDiv1.innerHTML = randomCards[0].html
+    }
+  })
+  let newDiv2 = document.createElement('div')
+  newDiv2.innerHTML = cardBack
+  board.append(newDiv2)
+  newDiv2.addEventListener('click', () => {
+    if ((newDiv2.innerHTML = cardBack)) {
+      newDiv2.innerHTML = randomCards[1].html
+    }
+  })
+  let newDiv3 = document.createElement('div')
+  newDiv3.innerHTML = cardBack
+  board.append(newDiv3)
+  newDiv3.addEventListener('click', () => {
+    if ((newDiv3.innerHTML = cardBack)) {
+      newDiv3.innerHTML = randomCards[2].html
+    }
+  })
+  let newDiv4 = document.createElement('div')
+  newDiv4.innerHTML = cardBack
+  board.append(newDiv4)
+  newDiv4.addEventListener('click', () => {
+    if ((newDiv4.innerHTML = cardBack)) {
+      newDiv4.innerHTML = randomCards[3].html
+    }
+  })
+  let newDiv5 = document.createElement('div')
+  newDiv5.innerHTML = cardBack
+  board.append(newDiv5)
+  newDiv5.addEventListener('click', () => {
+    if ((newDiv5.innerHTML = cardBack)) {
+      newDiv5.innerHTML = randomCards[4].html
+    }
+  })
+  let newDiv6 = document.createElement('div')
+  newDiv6.innerHTML = cardBack
+  board.append(newDiv6)
+  newDiv6.addEventListener('click', () => {
+    if ((newDiv6.innerHTML = cardBack)) {
+      newDiv6.innerHTML = randomCards[5].html
+    }
+  })
+}
+createBoard()
+
 // randomCards.forEach(() => {
 //   let createDiv = () => {
 //     let newDiv = document.createElement('div')
