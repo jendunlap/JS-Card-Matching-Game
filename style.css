@@ -1,0 +1,28 @@
+body {
+  background-color:  #381f7a;
+  display: grid;
+  grid-template-rows: .5fr 3fr .5fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 30px;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 15px 15px #0f004a;
+  border-radius: 10px;
+}
