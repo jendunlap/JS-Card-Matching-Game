@@ -60,6 +60,7 @@ const flipCard = (div, card) => {
     div.classList.remove('back')
     div.classList.add(card.name)
     div.classList.add('flipped')
+    div.classList.add('animate__flipOutY')
     if (!firstCard) {
       firstCard = card
       firstDiv = div

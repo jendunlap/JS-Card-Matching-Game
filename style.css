@@ -28,6 +28,8 @@ header, footer {
   height: auto;
   box-shadow: 10px 10px #0f004a;
   border-radius: 10px;
+  animation: flipOutY;
+  animation-duration: .18s;
 }
 
 .cell img {
