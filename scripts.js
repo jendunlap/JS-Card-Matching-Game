@@ -1,6 +1,5 @@
 //sound & button to turn off sound
 //timer
-//on hover red border
 
 const board = document.querySelector('.board')
 const cardBack = '<img src="https://i.imgur.com/ywruWIz.jpg">'
@@ -48,6 +47,7 @@ cards.forEach((card) => {
 randomCards.forEach((card) => {
   let cardDiv = document.createElement('div')
   cardDiv.innerHTML = cardBack
+  cardDiv.classList.add('card')
   cardDiv.classList.add('back')
   board.append(cardDiv)
   cardDiv.addEventListener('click', () => flipCard(cardDiv, card))
@@ -77,7 +77,11 @@ const compareCard = () => {
   if (firstCard.name === secondCard.name) {
     lock = false
     score++
+    scoreCount.innerText = '🟡 ' + score
     console.log(score)
+    if (firstCard.name === 'mushroom' && secondCard.name === 'mushroom') {
+      scoreCell1.innerHTML = scoreCards[0].html
+    }
   } else {
     setTimeout(() => {
       firstDiv.innerHTML = cardBack
@@ -108,6 +112,7 @@ footer.append(scoreCells)
 const scoreCell1 = document.createElement('div')
 scoreCell1.classList.add('cell1')
 scoreCell1.classList.add('cell')
+// scoreCell1.innerHTML = scoreCards[1].html
 scoreCells.append(scoreCell1)
 const scoreCell2 = document.createElement('div')
 scoreCell2.classList.add('cell2')
@@ -131,9 +136,9 @@ topRow.append(world)
 topRow.append(p)
 topRow.append(scoreCount)
 
+scoreCount.innerText = '🟡 ' + score
 world.innerText = 'WORLD 8'
 p.innerText = 'ᐅ ᐅ ᐅ ᐅ ᐅ ᐅ ᐅ P'
-scoreCount.innerText = '🟡 ' + score
 
 const bottomRow = document.createElement('div')
 bottomRow.classList.add('bottomrow')
