@@ -4,6 +4,15 @@
 
 const board = document.querySelector('.board')
 const cardBack = '<img src="https://i.imgur.com/ywruWIz.jpg">'
+const scoreCards = [
+  {
+    name: 'mushroomscore',
+    html: '<img src ="https://i.imgur.com/d4dhn4y.jpg">'
+  },
+  { name: 'flowerscore', html: '<img src ="https://i.imgur.com/XTguK2X.jpg">' },
+  { name: 'starscore', html: '<img src ="https://i.imgur.com/0UpRcxB.jpg">' }
+]
+
 const cards = [
   { name: 'coin10', html: '<img src = "https://i.imgur.com/E7dMsON.jpeg">' },
   { name: 'coin20', html: '<img src = "https://i.imgur.com/krrXWfU.jpeg">' },
@@ -91,6 +100,23 @@ const footer = document.querySelector('.footer')
 const scoreBoard = document.createElement('div')
 scoreBoard.classList.add('scoreboard')
 footer.append(scoreBoard)
+
+const scoreCells = document.createElement('div')
+scoreCells.classList.add('scorecells')
+footer.append(scoreCells)
+
+const scoreCell1 = document.createElement('div')
+scoreCell1.classList.add('cell1')
+scoreCell1.classList.add('cell')
+scoreCells.append(scoreCell1)
+const scoreCell2 = document.createElement('div')
+scoreCell2.classList.add('cell2')
+scoreCell2.classList.add('cell')
+scoreCells.append(scoreCell2)
+const scoreCell3 = document.createElement('div')
+scoreCell3.classList.add('cell3')
+scoreCell3.classList.add('cell')
+scoreCells.append(scoreCell3)
 
 const topRow = document.createElement('div')
 topRow.classList.add('toprow')

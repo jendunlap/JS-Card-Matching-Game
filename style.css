@@ -2,7 +2,7 @@ body {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: .30fr 2fr .20fr .5fr;
+  grid-template-rows: .40fr 2fr .30fr .4fr;
   background-image: url("https://i.imgur.com/riZHHet.jpg");
   background-size: 4%;
 }
@@ -45,9 +45,23 @@ footer {
 .scoreboard {
   background-color: #0660ae;
   box-shadow: 0 0 0 .3em white;
-  width: 500px;
-  height: 60px;
-  border-radius: 10px;
+  width: 450px;
+  height: 80px;
+  border-radius: 5px;
+}
+
+.scorecells {
+  display: flex;
+  margin: 10px 10px 10px 20px;
+}
+
+.cell {
+  background-color: #0660ae;
+  box-shadow: 0 0 0 .3em white;
+  width: 50px;
+  height: 80px;
+  border-radius: 5px;
+  margin: 0 10px 0 5px;
 }
 
 .toprow, .bottomrow {
@@ -57,21 +71,21 @@ footer {
 
 .world, .scorecount, .lives, .numbers, .timedisplay {
   font-family: 'Quantico', sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   color: #ecbc36;
   text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
 }
 
 .p {
-  padding: 5px 15px 0 15px;
+  padding: 15px 15px 0 15px;
   font-family: 'Quantico', sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   color: white;
   text-shadow: -2px -2px 0 #8ac9f2 2px -2px 0 #8ac9f2, -2px 2px 0 #8ac9f2, 2px 2px 0 #8ac9f2;
 }
 
 .world, .scorecount {
-  padding: 5px 15px 0 15px;
+  padding: 15px 15px 0 15px;
 }
 
 .lives, .numbers, .timedisplay {
