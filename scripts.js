@@ -31,6 +31,19 @@ let secondDiv = null
 let score = 0
 let lock = false
 
+let gameTimer = 300
+let timer = setInterval(() => {
+  timeDisplay.innerText = '🕒 ' + gameTimer
+  gameTimer--
+  if (gameTimer === 0) {
+    console.log("TIME'S UP!")
+    clearInterval(timer)
+  }
+  if (score === randomCards.length / 2) {
+    clearInterval(timer)
+  }
+}, 1000)
+
 cards.forEach((card) => {
   randomCards.splice(
     Math.floor(Math.random() * (cards.length * 2 - 1)),
@@ -60,7 +73,6 @@ const flipCard = (div, card) => {
     div.classList.remove('back')
     div.classList.add(card.name)
     div.classList.add('flipped')
-    div.classList.add('animate__flipOutY')
     if (!firstCard) {
       firstCard = card
       firstDiv = div
@@ -156,4 +168,4 @@ bottomRow.append(timeDisplay)
 
 lives.innerText = 'M x 001'
 numbers.innerText = '4 2 0 6 9 6 9'
-timeDisplay.innerText = '🕒 300'
+timeDisplay.innerText = '🕒 ' + gameTimer
