@@ -1,5 +1,11 @@
-//sound & button to turn off sound
-//timer
+//to do
+//fix resize thing
+//fix cover image
+//fix height of pages
+//make win/timeup page (or modal)
+//try to fix images in cells
+//try to get text to type
+//possiblly sounds
 
 const board = document.querySelector('.board')
 const cardBack = '<img src="https://i.imgur.com/ywruWIz.jpg">'
@@ -31,9 +37,8 @@ let secondDiv = null
 let score = 0
 let lock = false
 
-let gameTimer = 300
+let gameTimer = 100
 let timer = setInterval(() => {
-  timeDisplay.innerText = '🕒 ' + gameTimer
   gameTimer--
   if (gameTimer === 0) {
     console.log("TIME'S UP!")
@@ -42,6 +47,7 @@ let timer = setInterval(() => {
   if (score === randomCards.length / 2) {
     clearInterval(timer)
   }
+  timeDisplay.innerText = '🕒 0' + gameTimer
 }, 1000)
 
 cards.forEach((card) => {
@@ -95,6 +101,12 @@ const compareCard = () => {
     if (firstCard.name === 'mushroom' && secondCard.name === 'mushroom') {
       scoreCell1.innerHTML = scoreCards[0].html
     }
+    if (firstCard.name === 'flower' && secondCard.name === 'flower') {
+      scoreCell2.innerHTML = scoreCards[1].html
+    }
+    if (firstCard.name === 'star' && secondCard.name === 'star') {
+      scoreCell3.innerHTML = scoreCards[2].html
+    }
   } else {
     setTimeout(() => {
       firstDiv.innerHTML = cardBack
@@ -109,8 +121,13 @@ const compareCard = () => {
 const declareWin = () => {
   if (score === randomCards.length / 2) {
     console.log('win!')
+    gameWin.style.display = 'block'
   }
 }
+
+const gameWin = document.createElement('modal')
+gameWin.classList.add('modal')
+gameWin.innerText = 'YOU WIN!'
 
 //////FOOTER//////
 const footer = document.querySelector('.footer')

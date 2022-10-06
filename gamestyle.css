@@ -3,19 +3,18 @@ body {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   grid-template-rows: .40fr 2fr .30fr .4fr;
-  background-image: url("https://i.imgur.com/riZHHet.jpg");
-  background-size: 4%;
+  background-color: black;
 }
 
 section {
   display: grid;
-  background-color:  #381f7a;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  background-image:  url("https://i.imgur.com/fhksC04.png");
+  background-size: 100%;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   grid-gap: 30px;
   padding: 20px 50px 20px 50px;
-  box-shadow: inset 20px 20px #0f004a;
+  /* box-shadow: 0 0 0 .3em white; */
 }
 
 header, footer {
@@ -23,23 +22,34 @@ header, footer {
   text-align: center;
 }
 
-.card img {
-  max-width: 100%;
-  height: auto;
-  box-shadow: 10px 10px #0f004a;
-  border-radius: 10px;
-  animation: flipOutY;
-  animation-duration: .2s;
+.container {
+  display: flex;
+  background-color: #0660ae;
+  box-shadow: 0 0 0 .3em white;
+  width: 650px;
+  height: 100px;
+  border-radius: 5px;
+  margin: 20px 0 0 0;
 }
 
-.cell img {
-  max-width: 100%;
-  height: auto;
+.info {
+  display: flex;
+  font-family: 'Quantico', sans-serif;
+  font-size: 28px;
+  color: white;
+  padding: 7px 15px 0 15px;
+  /* overflow: hidden;
+  text: wrap;
+  white-space: nowrap;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite; */
 }
 
-.card img:hover {
-  box-shadow: 0 0 0 .5em #eb2026;
-}
+/* @keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+} */
 
 footer {
   display: flex;
@@ -60,6 +70,20 @@ footer {
 .scorecells {
   display: flex;
   margin: 10px 10px 10px 20px;
+}
+
+button {
+  margin: -150px 300px 0 300px;
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #eb2026;
+  border: none;
+  color: white;
+  font-family: 'Quantico', sans-serif;
+  font-size: 18px;
+  animation: heartBeat;
+  animation-duration: .8s;
 }
 
 .cell {
@@ -101,10 +125,4 @@ footer {
 .lives, .numbers, .timedisplay {
   padding: 0 15px 0 15px;
   margin: -10px 0 0 0;
-}
-
-.modal {
-  display: none;
-  background-color: hotpink;
-  color: white;
 }
