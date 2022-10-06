@@ -1,12 +1,11 @@
-//to do
-//fix resize thing
-//fix cover image
-//can I change timer color?
-//fix height of pages
-//make win/timeup page (or modal)
-//try to fix images in cells
-//try to get text to type
-//possiblly sounds
+//TODO?
+//array of correctly guessed cards
+//query selector all for cells set inner html of cell to same index of completed array
+// possibly use for each
+//search reg x sometime
+//flip the cards to the back again when the game is over
+//maybe don't reload page and count how many times won
+//function to reset page but not reload
 
 const board = document.querySelector('.board')
 const cardBack = '<img src="https://i.imgur.com/yWY6Uw9.jpg">'
@@ -42,13 +41,16 @@ let gameTimer = 100
 let timer = setInterval(() => {
   gameTimer--
   if (gameTimer === 0) {
-    console.log("TIME'S UP!")
     clearInterval(timer)
   }
   if (score === randomCards.length / 2) {
     clearInterval(timer)
   }
-  timeDisplay.innerText = '🕒 0' + gameTimer
+  if (p.innerText === 'YOU WIN!!!') {
+    timeDisplay.innerText = ''
+  } else {
+    timeDisplay.innerText = '🕒 0' + gameTimer
+  }
 }, 1000)
 
 cards.forEach((card) => {
@@ -93,12 +95,6 @@ const flipCard = (div, card) => {
   }
 }
 
-//array of correctly guessed cards
-//query selector all for cells set inner html of cell to same index of completed array
-// possibly use for each
-//search reg x sometime
-//flip the cards to the back again when the
-
 const compareCard = () => {
   if (firstCard.name === secondCard.name) {
     lock = false
@@ -125,22 +121,22 @@ const compareCard = () => {
   secondCard = null
 }
 
+const replay = () => {
+  window.location.reload(false)
+}
+
 const declareWin = () => {
   if (score === randomCards.length / 2) {
     console.log('win!')
-    //flip cards to back
-    //make footer declare win
-    //reload page
-    //location.reload()
+    scoreCount.innerText = ''
+    world.innerText = ''
+    p.innerText = 'YOU WIN!!!'
+    lives.innerText = ''
+    numbers.innerText = 'Click to play again!'
+    timeDisplay.innerText = ''
+    scoreBoard.addEventListener('click', replay)
   }
 }
-
-//maybe don't reload page and count how many times won
-//function to reset page but not reload
-
-const gameWin = document.createElement('modal')
-gameWin.classList.add('modal')
-gameWin.innerText = 'YOU WIN!'
 
 //////FOOTER//////
 const footer = document.querySelector('.footer')
