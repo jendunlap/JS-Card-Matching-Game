@@ -3,7 +3,7 @@ const button = document.querySelector('button')
 button.style.visibility = 'hidden'
 setTimeout(() => {
   button.style.visibility = 'visible'
-}, 500)
+}, 100)
 button.className = 'animated heartBeat score'
 //////FOOTER//////
 // const footer = document.querySelector('footer')

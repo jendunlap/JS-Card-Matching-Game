@@ -8,6 +8,140 @@ body {
 }
 
 section {
+  display: grid;
+  width: 700px;
+  height: 600px;
+  background-image:  url("https://i.imgur.com/XaQx5xf.jpg");
+  background-size: cover;
+  justify-content: center;
+  grid-gap: 30px;
+  padding: 20px 50px 20px 50px;
+}
+
+header, footer {
+  grid-column: span 3;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  background-color: #0660ae;
+  box-shadow: 0 0 0 .3em white;
+  width: 650px;
+  height: 100px;
+  border-radius: 5px;
+  margin: 30px 0 0 0;
+}
+
+.info {
+  display: flex;
+  font-family: 'Quantico', sans-serif;
+  font-size: 28px;
+  color: white;
+  padding: 7px 15px 0 15px;
+  overflow: hidden;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+footer {
+  display: flex;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 10px 0 30px 0;
+}
+
+.scoreboard {
+  background-color: #0660ae;
+  box-shadow: 0 0 0 .3em white;
+  width: 450px;
+  height: 80px;
+  border-radius: 5px;
+}
+
+.scorecells {
+  display: flex;
+  margin: 10px 10px 10px 20px;
+}
+
+button {
+  margin: -150px 300px 0 300px;
+  width: 120px;
+  height: 60px;
+  border-radius: 5px;
+  background-color: #eb2026;
+  border: none;
+  color: white;
+  font-family: 'Quantico', sans-serif;
+  font-size: 32px;
+  animation: heartBeat;
+  animation-duration: .8s;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0660ae;
+  box-shadow: 0 0 0 .3em white;
+  width: 50px;
+  height: 80px;
+  border-radius: 5px;
+  margin: 0 10px 0 5px;
+}
+
+.toprow, .bottomrow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.world, .scorecount, .lives, .numbers, .timedisplay {
+  font-family: 'Quantico', sans-serif;
+  font-size: 22px;
+  color: #ecbc36;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+}
+
+.p {
+  padding: 15px 15px 0 15px;
+  font-family: 'Quantico', sans-serif;
+  font-size: 22px;
+  color: white;
+  text-shadow: -2px -2px 0 #8ac9f2 2px -2px 0 #8ac9f2, -2px 2px 0 #8ac9f2, 2px 2px 0 #8ac9f2;
+}
+
+.world, .scorecount {
+  padding: 15px 15px 0 15px;
+}
+
+.lives, .numbers, .timedisplay {
+  padding: 0 15px 0 15px;
+  margin: -10px 0 0 0;
+}
+
+/* body {
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: .40fr 2fr .30fr .4fr;
+  background-color: black;
+}
+
+section {
   width: 700px;
   height: 600px;
   display: grid;
@@ -26,8 +160,6 @@ header, footer {
 }
 
 .container {
-  display: flex;
-  position: center;
   justify-content: center;
   align-items: center;
   background-color: #0660ae;
@@ -130,4 +262,4 @@ button {
 .lives, .numbers, .timedisplay {
   padding: 0 15px 0 15px;
   margin: -10px 0 0 0;
-}
+} */
