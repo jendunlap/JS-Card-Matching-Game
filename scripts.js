@@ -8,26 +8,26 @@
 //possiblly sounds
 
 const board = document.querySelector('.board')
-const cardBack = '<img src="https://i.imgur.com/ywruWIz.jpg">'
+const cardBack = '<img src="https://i.imgur.com/yWY6Uw9.jpg">'
 const scoreCards = [
   {
     name: 'mushroomscore',
-    html: '<img src ="https://i.imgur.com/d4dhn4y.jpg">'
+    html: '<img src ="https://i.imgur.com/4aESqHN.jpg">'
   },
-  { name: 'flowerscore', html: '<img src ="https://i.imgur.com/XTguK2X.jpg">' },
-  { name: 'starscore', html: '<img src ="https://i.imgur.com/0UpRcxB.jpg">' }
+  { name: 'flowerscore', html: '<img src ="https://i.imgur.com/w9bcqXV.jpg">' },
+  { name: 'starscore', html: '<img src ="https://i.imgur.com/Fd0xeUO.jpg">' }
 ]
 
 const cards = [
-  { name: 'coin10', html: '<img src = "https://i.imgur.com/E7dMsON.jpeg">' },
-  { name: 'coin20', html: '<img src = "https://i.imgur.com/krrXWfU.jpeg">' },
-  { name: 'life', html: '<img src="https://i.imgur.com/T5hg4TQ.jpeg">' },
-  { name: 'flower', html: '<img src = "https://i.imgur.com/rUjl6lP.jpeg">' },
-  { name: 'mushroom', html: '<img src="https://i.imgur.com/G08DFIg.jpeg">' },
-  { name: 'star', html: '<img src="https://i.imgur.com/daLHV0t.jpeg">' },
-  { name: 'flower', html: '<img src = "https://i.imgur.com/rUjl6lP.jpeg">' },
-  { name: 'mushroom', html: '<img src="https://i.imgur.com/G08DFIg.jpeg">' },
-  { name: 'star', html: '<img src="https://i.imgur.com/daLHV0t.jpeg">' }
+  { name: 'coin10', html: '<img src = "https://i.imgur.com/Cxgymyh.jpg">' },
+  { name: 'coin20', html: '<img src = "https://i.imgur.com/QH03oU9.jpg">' },
+  { name: 'life', html: '<img src="https://i.imgur.com/SzE1NRM.jpg">' },
+  { name: 'flower', html: '<img src = "https://i.imgur.com/hMpSUju.jpg">' },
+  { name: 'mushroom', html: '<img src="https://i.imgur.com/UTtJ9Pf.jpg">' },
+  { name: 'star', html: '<img src="https://i.imgur.com/Pt3VRv6.jpg">' },
+  { name: 'flower', html: '<img src = "https://i.imgur.com/hMpSUju.jpg">' },
+  { name: 'mushroom', html: '<img src="https://i.imgur.com/UTtJ9Pf.jpg">' },
+  { name: 'star', html: '<img src="https://i.imgur.com/Pt3VRv6.jpg">' }
 ]
 let randomCards = []
 let firstCard = null
