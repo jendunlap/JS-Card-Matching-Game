@@ -1,20 +1,23 @@
 body {
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  justify-content: center;
+  align-items: center;
   grid-template-rows: .40fr 2fr .30fr .4fr;
   background-color: black;
 }
 
 section {
+  width: 700px;
+  height: 600px;
   display: grid;
   background-image:  url("https://i.imgur.com/fhksC04.png");
-  background-size: 100%;
+  background-size: 700px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   grid-gap: 30px;
   padding: 20px 50px 20px 50px;
-  /* box-shadow: 0 0 0 .3em white; */
 }
 
 header, footer {
@@ -24,12 +27,14 @@ header, footer {
 
 .container {
   display: flex;
+  position: center;
+  justify-content: center;
+  align-items: center;
   background-color: #0660ae;
   box-shadow: 0 0 0 .3em white;
   width: 650px;
   height: 100px;
   border-radius: 5px;
-  margin: 20px 0 0 0;
 }
 
 .info {
@@ -38,18 +43,18 @@ header, footer {
   font-size: 28px;
   color: white;
   padding: 7px 15px 0 15px;
-  /* overflow: hidden;
-  text: wrap;
+  overflow: hidden;
+  flex-wrap: wrap;
   white-space: nowrap;
   animation: 
     typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite; */
+    blink-caret .75s step-end infinite;
 }
 
-/* @keyframes typing {
+@keyframes typing {
   from { width: 0 }
   to { width: 100% }
-} */
+}
 
 footer {
   display: flex;

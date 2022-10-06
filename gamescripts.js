@@ -6,7 +6,7 @@ setTimeout(() => {
 }, 500)
 button.className = 'animated heartBeat score'
 //////FOOTER//////
-// const footer = document.querySelector('.footer')
+// const footer = document.querySelector('footer')
 // const scoreBoard = document.createElement('div')
 // scoreBoard.classList.add('scoreboard')
 // footer.append(scoreBoard)

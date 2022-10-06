@@ -1,13 +1,16 @@
 body {
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  justify-content: center;
+  align-items: center;
   grid-template-rows: .40fr 2fr .30fr .4fr;
   background-image: url("https://i.imgur.com/riZHHet.jpg");
   background-size: 4%;
 }
 
 section {
+  width: 700px;
+  height: 600px;
   display: grid;
   background-color:  #381f7a;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -24,8 +27,7 @@ header, footer {
 }
 
 .card img {
-  max-width: 100%;
-  height: auto;
+  height: 120px;
   box-shadow: 10px 10px #0f004a;
   border-radius: 10px;
   animation: flipOutY;
@@ -43,10 +45,14 @@ header, footer {
 
 footer {
   display: flex;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
   justify-content: center;
   align-items: center;
   background-color: black;
-  margin: 0 -10px -10px -10px;
+  padding: 10px 0 30px 0;
 }
 
 .scoreboard {

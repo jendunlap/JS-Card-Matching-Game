@@ -1,6 +1,7 @@
 //to do
 //fix resize thing
 //fix cover image
+//can I change timer color?
 //fix height of pages
 //make win/timeup page (or modal)
 //try to fix images in cells
@@ -92,6 +93,12 @@ const flipCard = (div, card) => {
   }
 }
 
+//array of correctly guessed cards
+//query selector all for cells set inner html of cell to same index of completed array
+// possibly use for each
+//search reg x sometime
+//flip the cards to the back again when the
+
 const compareCard = () => {
   if (firstCard.name === secondCard.name) {
     lock = false
@@ -121,9 +128,15 @@ const compareCard = () => {
 const declareWin = () => {
   if (score === randomCards.length / 2) {
     console.log('win!')
-    gameWin.style.display = 'block'
+    //flip cards to back
+    //make footer declare win
+    //reload page
+    //location.reload()
   }
 }
+
+//maybe don't reload page and count how many times won
+//function to reset page but not reload
 
 const gameWin = document.createElement('modal')
 gameWin.classList.add('modal')
@@ -142,7 +155,6 @@ footer.append(scoreCells)
 const scoreCell1 = document.createElement('div')
 scoreCell1.classList.add('cell1')
 scoreCell1.classList.add('cell')
-// scoreCell1.innerHTML = scoreCards[1].html
 scoreCells.append(scoreCell1)
 const scoreCell2 = document.createElement('div')
 scoreCell2.classList.add('cell2')
