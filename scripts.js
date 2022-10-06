@@ -29,6 +29,11 @@ const cards = [
   { name: 'mushroom', html: '<img src="https://i.imgur.com/UTtJ9Pf.jpg">' },
   { name: 'star', html: '<img src="https://i.imgur.com/Pt3VRv6.jpg">' }
 ]
+
+const matchSound = new Audio(
+  'https://www.myinstants.com/en/instant/coin-mario/?utm_source=copy&utm_medium=share'
+)
+
 let randomCards = []
 let firstCard = null
 let secondCard = null
@@ -42,6 +47,13 @@ let timer = setInterval(() => {
   gameTimer--
   if (gameTimer === 0) {
     clearInterval(timer)
+    scoreCount.innerText = ''
+    world.innerText = ''
+    p.innerText = "TIME'S UP!"
+    lives.innerText = ''
+    numbers.innerText = 'Click to try again!'
+    timeDisplay.innerText = ''
+    scoreBoard.addEventListener('click', replay)
   }
   if (score === randomCards.length / 2) {
     clearInterval(timer)
@@ -50,6 +62,12 @@ let timer = setInterval(() => {
     timeDisplay.innerText = ''
   } else {
     timeDisplay.innerText = '🕒 0' + gameTimer
+  }
+  if (gameTimer > 0) {
+    timeDisplay.innerText = '🕒 0' + gameTimer
+  } else {
+    timeDisplay.innerText = ''
+    lock = true
   }
 }, 1000)
 
@@ -94,13 +112,12 @@ const flipCard = (div, card) => {
     }
   }
 }
-
+matchSound.play()
 const compareCard = () => {
   if (firstCard.name === secondCard.name) {
     lock = false
     score++
     scoreCount.innerText = '🟡 ' + score
-    console.log(score)
     if (firstCard.name === 'mushroom' && secondCard.name === 'mushroom') {
       scoreCell1.innerHTML = scoreCards[0].html
     }
@@ -121,13 +138,8 @@ const compareCard = () => {
   secondCard = null
 }
 
-const replay = () => {
-  window.location.reload(false)
-}
-
 const declareWin = () => {
   if (score === randomCards.length / 2) {
-    console.log('win!')
     scoreCount.innerText = ''
     world.innerText = ''
     p.innerText = 'YOU WIN!!!'

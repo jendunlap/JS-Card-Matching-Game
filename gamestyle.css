@@ -11,7 +11,7 @@ section {
   display: grid;
   width: 700px;
   height: 600px;
-  background-image:  url("https://i.imgur.com/XaQx5xf.jpg");
+  background-image:  url("https://i.imgur.com/fLGWL9t.jpg");
   background-size: cover;
   justify-content: center;
   grid-gap: 30px;
@@ -43,7 +43,7 @@ header, footer {
   flex-wrap: wrap;
   white-space: nowrap;
   animation: 
-    typing 3.5s steps(40, end),
+    typing 2s steps(40, end),
     blink-caret .75s step-end infinite;
 }
 
