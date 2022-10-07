@@ -4,8 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   grid-template-rows: .40fr 2fr .30fr .4fr;
-  background-image: url("https://i.imgur.com/riZHHet.jpg");
-  background-size: 4%;
+  background-image: url("https://i.imgur.com/F3KRejQ.jpg");
 }
 
 section {

@@ -30,10 +30,6 @@ const cards = [
   { name: 'star', html: '<img src="https://i.imgur.com/Pt3VRv6.jpg">' }
 ]
 
-const matchSound = new Audio(
-  'https://www.myinstants.com/en/instant/coin-mario/?utm_source=copy&utm_medium=share'
-)
-
 let randomCards = []
 let firstCard = null
 let secondCard = null
@@ -42,18 +38,15 @@ let secondDiv = null
 let score = 0
 let lock = false
 
+let replay = () => {
+  window.location.reload(false)
+}
+
 let gameTimer = 100
 let timer = setInterval(() => {
   gameTimer--
   if (gameTimer === 0) {
     clearInterval(timer)
-    scoreCount.innerText = ''
-    world.innerText = ''
-    p.innerText = "TIME'S UP!"
-    lives.innerText = ''
-    numbers.innerText = 'Click to try again!'
-    timeDisplay.innerText = ''
-    scoreBoard.addEventListener('click', replay)
   }
   if (score === randomCards.length / 2) {
     clearInterval(timer)
@@ -63,11 +56,17 @@ let timer = setInterval(() => {
   } else {
     timeDisplay.innerText = '🕒 0' + gameTimer
   }
-  if (gameTimer > 0) {
+  if (gameTimer > 0 && score !== randomCards.length / 2) {
     timeDisplay.innerText = '🕒 0' + gameTimer
-  } else {
+  } else if (score !== randomCards.length / 2) {
     timeDisplay.innerText = ''
     lock = true
+    scoreCount.innerText = ''
+    world.innerText = ''
+    p.innerText = "TIME'S UP!"
+    lives.innerText = ''
+    numbers.innerText = 'Click to try again!'
+    scoreBoard.addEventListener('click', replay)
   }
 }, 1000)
 
@@ -112,7 +111,7 @@ const flipCard = (div, card) => {
     }
   }
 }
-matchSound.play()
+
 const compareCard = () => {
   if (firstCard.name === secondCard.name) {
     lock = false
