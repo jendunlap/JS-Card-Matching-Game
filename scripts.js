@@ -1,3 +1,5 @@
+/////VARIABLES/////
+
 const board = document.querySelector('.board')
 const cardBack = '<img src="https://i.imgur.com/yWY6Uw9.jpg">'
 const scoreCards = [
@@ -28,6 +30,8 @@ let firstDiv = null
 let secondDiv = null
 let score = 0
 let lock = false
+
+/////FUNCTIONS/////
 
 let replay = () => {
   window.location.reload(false)
@@ -141,6 +145,7 @@ const declareWin = () => {
 }
 
 //////FOOTER//////
+
 const footer = document.querySelector('.footer')
 const scoreBoard = document.createElement('div')
 scoreBoard.classList.add('scoreboard')

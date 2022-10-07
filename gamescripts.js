@@ -1,11 +1,5 @@
-console.log('country roads?')
-const button = document.querySelector('button')
-button.style.visibility = 'hidden'
-setTimeout(() => {
-  button.style.visibility = 'visible'
-}, 100)
-button.className = 'animated heartBeat score'
 //////FOOTER//////
+
 const footer = document.querySelector('footer')
 const scoreBoard = document.createElement('div')
 scoreBoard.classList.add('scoreboard')
@@ -61,3 +55,15 @@ bottomRow.append(timeDisplay)
 lives.innerText = 'M x 001'
 numbers.innerText = '4 2 0 6 9 6 9'
 timeDisplay.innerText = '🕒 100'
+
+/////VARIABLES/////
+
+const button = document.querySelector('button')
+button.style.visibility = 'hidden'
+
+/////FUNCTIONS/////
+
+setTimeout(() => {
+  button.style.visibility = 'visible'
+}, 100)
+button.className = 'animated heartBeat score'

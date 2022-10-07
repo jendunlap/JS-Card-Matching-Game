@@ -40,6 +40,12 @@ Win!
 
 ---
 
+### **_Ready to Play?_**
+
+Check out the deployed game on [Surge](https://lets-a-go-its-a-me-mario.surge.sh/)!
+
+- Note! The Chrome extension "Imagus" conflicts with game function - go ahead and disable that one before you work your memory magic!
+
 ### **_Future Updates_**
 
 - [ ] Game sound!
