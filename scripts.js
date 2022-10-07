@@ -1,12 +1,3 @@
-//TODO?
-//array of correctly guessed cards
-//query selector all for cells set inner html of cell to same index of completed array
-// possibly use for each
-//search reg x sometime
-//flip the cards to the back again when the game is over
-//maybe don't reload page and count how many times won
-//function to reset page but not reload
-
 const board = document.querySelector('.board')
 const cardBack = '<img src="https://i.imgur.com/yWY6Uw9.jpg">'
 const scoreCards = [

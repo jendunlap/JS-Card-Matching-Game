@@ -8,13 +8,14 @@
 
 ---
 
-### **_Description_**
+### **_Let's A-go!_**
 
-A memory card game created with HTML, CSS and JavaScript.
+Get ready for a gut punch of nostalgia in this take on the classic Super Mario 3 card matching game!
+Featuring updated hand drawn graphics, it's 16 bit realness for the modern age. Beat the clock and flex those memory muscles!
 
 ---
 
-### **_Technologies Used_**
+### **_Created Using_**
 
 - HTML
 - CSS
@@ -22,26 +23,30 @@ A memory card game created with HTML, CSS and JavaScript.
 
 ---
 
-### **_Screenshots_**
+### **_Real Life Gameplay_**
 
-Homepage
+Start
 ![Image]()
 
-Game Start
+Gameplay
 ![Image]()
 
-Game Win
+Win!
 ![Image]()
 
 ---
 
 ### **_Future Updates_**
 
-- [ ] Animate
-- [ ] Hand Drawn Card Images
+- [ ] Game sound!
+- [ ] Infinite replays!
 
 ---
 
 ### **_Credits_**
 
-Current Images Used: [Where they're from]()
+[Original Gameplay]() |
+
+Text Animation
+
+Card Animation
