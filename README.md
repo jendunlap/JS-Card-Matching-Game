@@ -50,4 +50,4 @@ Win!
 
 ### **_Credits_**
 
-[Original Gameplay]() | [Text Animation](https://css-tricks.com/snippets/css/typewriter-effect/) | [Card Animation](https://animate.style/)
+[Original Gameplay](https://www.youtube.com/watch?v=z3vBYiXR75s&ab_channel=Titotintaso) | [Text Animation](https://css-tricks.com/snippets/css/typewriter-effect/) | [Card Animation](https://animate.style/)
